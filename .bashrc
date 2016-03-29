@@ -13,6 +13,9 @@
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
+alias afk='lock.sh'
+alias devops='devops.sh'
+alias gh='cd ~/GitHub'
 
 [ -n "$TERM" ] && alias htop='TERM=screen htop'
 
