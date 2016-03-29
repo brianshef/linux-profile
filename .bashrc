@@ -58,5 +58,5 @@ export PROMPT_COMMAND="history -a;history -c;history -r;$PROMPT_COMMAND"
 
 # Enable colored LS output
 export CLICOLOR=1
-export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
+export LSCOLORS=GxFxCxDxBxegedabagaced
 alias ls='ls -G'
