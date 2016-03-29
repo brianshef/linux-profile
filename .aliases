@@ -12,8 +12,11 @@ alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
 alias p="cd ~/projects"
 alias g="git"
+alias gh="cd ~/GitHub"
+alias ghb="cd ~/GitHub/brianshef"
 alias h="history"
 alias j="jobs"
+alias rs="cd ~/GitHub/rewardStyle"
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
@@ -147,4 +150,3 @@ alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resource
 
 # Reload the shell (i.e. invoke as a login shell)
 alias reload="exec $SHELL -l"
-
