@@ -13,9 +13,14 @@
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
+alias gh='cd ~/GitHub'
+alias ghb='cd ~/GitHub/brianshef'
+alias ghrs='cd ~/GitHub/rewardStyle'
+alias ghng='cd ~/GitHub/nastygoat'
 alias afk='lock.sh'
 alias devops='devops.sh'
-alias gh='cd ~/GitHub'
+alias script='newscript.sh' # Usage: script <SCRIPT_NAME>
+
 
 [ -n "$TERM" ] && alias htop='TERM=screen htop'
 
