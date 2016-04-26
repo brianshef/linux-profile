@@ -4,7 +4,9 @@
 [ -f /etc/bashrc ] && . /etc/bashrc
 
 # Load bash completions
-. $HOME/.local/share/bash-completion/bash_completion
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+  . $(brew --prefix)/etc/bash_completion
+fi
 
 # Uncomment the following line if you don't like systemctl's auto-paging feature:
 # export SYSTEMD_PAGER=
@@ -13,13 +15,24 @@
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
+alias afk='lock.sh'
+alias devops='devops.sh'
+alias script='newscript.sh' # Usage: script <SCRIPT_NAME>
+# Custom Git aliases
 alias gh='cd ~/GitHub'
 alias ghb='cd ~/GitHub/brianshef'
 alias ghrs='cd ~/GitHub/rewardStyle'
 alias ghng='cd ~/GitHub/nastygoat'
-alias afk='lock.sh'
-alias devops='devops.sh'
-alias script='newscript.sh' # Usage: script <SCRIPT_NAME>
+# Human Git Aliases (http://gggritso.com/human-git-aliases)
+alias status='git status --long'
+alias branches='git branch -a'
+alias tags='git tag'
+alias stashes='git stash list'
+alias unstage='git reset -q HEAD --'
+alias discard='git checkout --'
+alias uncommit='git reset --mixed HEAD~'
+alias amend='git commit --amend'
+alias precommit='git diff --cached --diff-algorithm=minimal -w'
 
 
 [ -n "$TERM" ] && alias htop='TERM=screen htop'
