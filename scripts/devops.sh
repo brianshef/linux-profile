@@ -1,9 +1,12 @@
 #!/bin/bash
 # Automatically logs in to DevOps remote server
 SERVER="devops.va"
-SSH_KEY="$HOME/.ssh/brianshef"
+KEY_DIR="$HOME/.ssh"
+SSH_KEYS=( "$KEY_DIR/brianshef" "$KEY_DIR/id_rsa" )
 
-echo "Adding SSH key $SSH_KEY to session ... "
-ssh-add $SSH_KEY
-echo " ... done. Logging in now ... "
-ssh $SERVER
+for key in "${SSH_KEYS[@]}"; do
+  echo "Adding SSH key $SSH_KEY to session ... "
+  ssh-add $key
+done
+echo " ... done. Logging in now (with agent forwarding enabled)... "
+ssh -A $SERVER
